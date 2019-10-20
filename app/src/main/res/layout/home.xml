@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:id="@+id/layout_home">
+
+
+    <include
+        layout="@layout/activity_maps"
+        android:id="@+id/map"/>
+
+    <SearchView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/search_location"
+        android:layout_margin="15dp"
+        android:queryHint="Search here...."
+        android:elevation="5dp"
+        android:iconifiedByDefault="false">
+    </SearchView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="15dp"
+        android:padding="15dp"
+        android:elevation="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:background="@color/colorGreen">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/text_card"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <SeekBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:outlineAmbientShadowColor="@color/colorDarkGreen"
+                    android:outlineSpotShadowColor="@color/colorPrimaryDark"
+                    android:id="@+id/seek_percentage"/>
+
+                <TextView
+                    android:id="@+id/text_percentage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="20dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Calculate Risk"
+                    android:layout_margin="5dp"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:id="@+id/button_calculate"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@color/colorDarkGreen" />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="View Details"
+                    android:textSize="20dp"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:id="@+id/button_details"
+                    android:layout_gravity="center"
+                    android:background="@color/colorDarkGreen"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
